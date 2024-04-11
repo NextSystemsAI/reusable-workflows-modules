@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@4f2f92e5ab58e748e0c4c845528ecf8c646d8373
+        uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
         with:
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           aws-region: ${{ secrets.AWS_REGION }}
@@ -90,7 +90,7 @@ jobs:
       # need to unset the region and credentials from deployment steps
       # credit: https://github.com/aws-actions/configure-aws-credentials/issues/340#issuecomment-1384364458
       - name: Configure AWS Credentials again with IAM user
-        uses: aws-actions/configure-aws-credentials@4f2f92e5ab58e748e0c4c845528ecf8c646d8373
+        uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
         env:
           AWS_DEFAULT_REGION:
           AWS_REGION:
