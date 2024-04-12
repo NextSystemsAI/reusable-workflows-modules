@@ -5,7 +5,7 @@ on:
     inputs:
       # working-directory is added to specify "terraform" directory in project source code as that's where the terraform files live.
       working-directory:
-        required: false
+        required: true
         type: string
         default: './terraform'
 
