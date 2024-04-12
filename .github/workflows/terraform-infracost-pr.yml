@@ -38,7 +38,7 @@ jobs:
       # this step calls infracost/actions/setup@v2, which installs the latest patch version of the Infracost CLI v0.10.x and
       # gets the backward-compatible bug fixes and new resources. Replacing the version number with git SHA is a security hardening measure.
       - name: Setup Infracost
-        uses: infracost/actions/setup@0d27b734c72a1abb0aba3e2c3f54e4982cbd2591
+        uses: infracost/actions/setup@d5dd739fb5eae81f31bf09fea5c290186a91964a
         # See https://github.com/infracost/actions/tree/master/setup for other inputs
         with:
           api-key: ${{ secrets.INFRACOST_API_KEY }}
